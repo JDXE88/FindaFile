@@ -1,71 +1,63 @@
-# Find-aFile.exe or PowerShell Script
+# Find-aFile
+
+`Find-aFile` is a utility designed to search for files on a specified drive based on the filename pattern and file type. The tool is available both as a PowerShell script and a standalone executable (`.exe`).
 
 ## Overview
 
-The `Find-aFile` PowerShell script is designed to search for files on a specified drive with a given filename pattern and file type. The search results are displayed in a graphical user interface (GUI) for easy viewing.
+The `Find-aFile` tool offers a graphical user interface (GUI) to facilitate file searches. You can use it as a PowerShell script or run the standalone executable directly on your Windows system.
 
 ## Features
 
-- **Search by Drive:** Specify the drive to search (e.g., `C:`, `D:`).
-- **Search by File Name:** Input the file name or pattern to search for.
-- **Search by File Type:** Choose from a list of file types (e.g., `.txt`, `.jpg`, `.pdf`).
-- **Graphical User Interface:** A Windows Form GUI to simplify input and execution.
+- **Search by Drive**: Specify the drive letter (e.g., `C:`, `D:`).
+- **Search by File Name**: Enter the file name or pattern to search for.
+- **Search by File Type**: Select from a variety of file types (e.g., `.txt`, `.jpg`, `.pdf`).
+- **GUI Interface**: Both the PowerShell script and `.exe` offer a user-friendly interface for ease of use.
 
-## Usage
+## Installation
 
-### Parameters
+### Using the PowerShell Script
 
-- **Drive**: (Mandatory) The drive letter to search on. Options include `A:`, `B:`, `C:`, etc.
-- **FileName**: (Mandatory) The name or pattern of the file to search for.
-- **FileType**: (Mandatory) The file extension or type to search for (e.g., `txt`, `pdf`, `jpg`).
-
-### Example Execution
-
-1. **Open PowerShell**: Run the script in a PowerShell environment with appropriate permissions.
-
-2. **Run the Script**: Execute the script to open the GUI:
-
+1. **Download the Script**: Obtain the `Find-aFile.ps1` file from the repository.
+2. **Open PowerShell**: Ensure you are using PowerShell 5.1 or later.
+3. **Run the Script**:
    ```powershell
    .\Find-aFile.ps1
    ```
+4. **Follow the GUI Prompts**: The GUI will allow you to input search criteria and display results.
 
-3. **Enter Search Criteria**:
-   - Select a drive from the dropdown list.
-   - Select a file type from the dropdown list.
-   - Enter the file name or pattern in the text box.
-   - Click "OK" to start the search, or "Cancel" to abort.
+### Using the Executable
 
-4. **View Results**: If files matching your criteria are found, they will be displayed in a grid view. If no files are found, a message will be shown in the PowerShell console.
+1. **Download the Executable**: Obtain the `Find-aFile.exe` file from the repository.
+2. **Run the Executable**: Double-click `Find-aFile.exe` to launch the application.
+3. **Follow the GUI Prompts**: The GUI will allow you to input search criteria and display results.
 
-## Script Details
+## Usage
 
-### `Find-aFile` Function
+### Parameters for PowerShell Script
 
-The `Find-aFile` function performs the file search based on the provided parameters:
-- Searches recursively in the specified drive.
-- Filters files based on the filename and file type.
-- Displays the results using `Out-GridView` or a message if no files are found.
+- **Drive**: (Mandatory) The drive letter to search on (e.g., `C:`, `D:`).
+- **FileName**: (Mandatory) The name or pattern of the file to search for.
+- **FileType**: (Mandatory) The file extension or type to search for (e.g., `txt`, `pdf`, `jpg`).
 
-### GUI Creation
+### Example Execution for PowerShell Script
 
-The script creates a Windows Form with:
-- Two dropdowns for selecting the drive and file type.
-- A text input for entering the file name.
-- OK and Cancel buttons for submitting or aborting the search.
+```powershell
+.\Find-aFile.ps1
+```
 
-## Requirements
-
-- **PowerShell**: Ensure you are running PowerShell 5.1 or later.
-- **.NET Framework**: Required for Windows Forms.
+Follow the GUI to select the drive, file type, and enter the file name.
 
 ## License
 
-This script is provided as-is. You are free to modify and use it according to your needs.
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). You are free to modify and distribute the code as long as you include the original license and attribution.
 
 ## Contact
 
-For questions or support, please add it to the issues section on this repo
+For questions or support, please add it to the issues area on this repo.
+
+## Acknowledgments
+
+- **PowerShell**: The script uses PowerShell for search functionality and GUI creation.
+- **Windows Forms**: Used for the GUI in both the PowerShell script and the standalone executable.
 
 ```
-
-Feel free to adjust the contact information or any other specifics according to your needs.
